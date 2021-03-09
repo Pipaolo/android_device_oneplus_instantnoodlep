@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_instantnoodlep.mk
+    $(LOCAL_DIR)/potato_instantnoodlep.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_instantnoodlep-user \
-    dot_instantnoodlep-userdebug \
-    dot_instantnoodlep-eng
+    potato_instantnoodlep-user \
+    potato_instantnoodlep-userdebug \
+    potato_instantnoodlep-eng

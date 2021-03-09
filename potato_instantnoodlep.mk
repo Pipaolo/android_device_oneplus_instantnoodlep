@@ -1,0 +1,49 @@
+#
+# Copyright (C) 2018 The LineageOS Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from instantnoodlep device
+$(call inherit-product, device/oneplus/instantnoodlep/device.mk)
+
+# Inherit from Potato vendor
+$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+
+TARGET_BOOT_ANIMATION_RES := 1440
+WITH_GAPPS := true
+TARGET_SUPPORTS_BLUR := true
+EXTRA_FOD_ANIMATIONS := true
+
+PRODUCT_NAME := potato_instantnoodlep
+PRODUCT_DEVICE := instantnoodlep
+PRODUCT_MANUFACTURER := OnePlus
+PRODUCT_BRAND := OnePlus
+PRODUCT_MODEL := IN2023
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 3168
+TARGET_SCREEN_WIDTH := 1440
+
+PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_DEVICE=OnePlus8Pro \
+    PRODUCT_NAME=OnePlus8Pro \
+    PRIVATE_BUILD_DESC="redfin-user 11 RQ2A.210305.007 7124944 release-keys"
+
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ2A.210305.007/7124944:user/release-keys
