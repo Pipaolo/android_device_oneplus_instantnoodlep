@@ -49,6 +49,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Inherit from oneplus sm8250-common
 $(call inherit-product, device/oneplus/sm8250-common/common.mk)
 
